@@ -584,231 +584,61 @@ em {
     }
 
 
-
     /* ===========================
-   BURGER MENU FIX MOBILE
+   HEADER MOBILE COMPACT
 =========================== */
 
-    /* Cacher la nav desktop sur mobile */
     @media (max-width: 768px) {
 
-        .nav ul {
-            display: none !important;
+        /* Header compact */
+        .header {
+            padding: 0.6rem 1rem !important;
+            text-align: left;
         }
 
-        /* montrer le burger */
+        .header h1 {
+            font-size: 1.1rem !important;
+            margin: 0;
+        }
+
+        /* Supprimer les gros boutons verticaux */
+        .nav {
+            margin-top: 0;
+            padding: 0;
+            justify-content: flex-end;
+        }
+
+        .nav ul {
+            display: none; /* caché en mobile */
+        }
+
+        /* Menu burger à droite */
         .burger {
             display: flex;
-            align-items: center;
         }
 
-        .burger-label {
-            display: flex;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid rgba(255,255,255,0.25);
-            border-radius: 8px;
-            background: transparent;
-        }
-
-        .burger-label span {
-            width: 22px;
-            height: 2px;
-            background: #fff;
-            position: relative;
-            border-radius: 2px;
-            transition: 0.25s;
-        }
-
-        .burger-label span::before,
-        .burger-label span::after {
-            content: "";
-            position: absolute;
-            width: 22px;
-            height: 2px;
-            background: #fff;
-            border-radius: 2px;
-            transition: 0.25s;
-        }
-
-        .burger-label span::before { top: -6px; }
-        .burger-label span::after { top: 6px; }
-
-        /* Animation croix */
-        .burger input:checked + .burger-label span {
-            background: transparent;
-        }
-
-        .burger input:checked + .burger-label span::before {
-            transform: translateY(6px) rotate(45deg);
-        }
-
-        .burger input:checked + .burger-label span::after {
-            transform: translateY(-6px) rotate(-45deg);
-        }
-
-        /* ===========================
-           MOBILE NAV
-        =========================== */
+        /* Menu déroulant horizontal */
         .mobile-nav {
             display: none;
-            background: linear-gradient(135deg, var(--accent1), var(--accent2));
-            padding: 1rem;
-            margin-top: 0.5rem;
-            border-radius: 10px;
+            width: 100%;
+            background: #00000055;
+            backdrop-filter: blur(8px);
+            padding: 0.5rem 0;
+            border-radius: 0;
+            text-align: center;
         }
 
         .mobile-nav a {
-            display: block;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            color: #fff;
-            text-decoration: none;
-            font-family: var(--ff-serif);
+            display: inline-block;
+            padding: 0.7rem 1rem;
+            margin: 0 0.25rem;
+            border: 1px solid var(--gold);
+            border-radius: 6px;
         }
 
-        /* ouvrir menu */
+        /* Ouvrir menu */
         .burger input:checked ~ .mobile-nav {
-            display: block !important;
-        }
-
-        /* éviter que la nav casse la mise en page */
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Header compact sur téléphone */
-        .header {
-            padding: 0.8rem;
-        }
-
-        .header h1 {
-            font-size: 1.2rem !important;
-        }
-    }
-
-    /* Extra small phones */
-    @media (max-width: 420px) {
-        .header h1 {
-            font-size: 1rem !important;
-        }
-    }
-    /* ===========================
-       BURGER MENU FIX MOBILE
-    =========================== */
-
-    /* Cacher la nav desktop sur mobile */
-    @media (max-width: 768px) {
-
-        .nav ul {
-            display: none !important;
-        }
-
-        /* montrer le burger */
-        .burger {
-            display: flex;
-            align-items: center;
-        }
-
-        .burger-label {
-            display: flex;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid rgba(255,255,255,0.25);
-            border-radius: 8px;
-            background: transparent;
-        }
-
-        .burger-label span {
-            width: 22px;
-            height: 2px;
-            background: #fff;
-            position: relative;
-            border-radius: 2px;
-            transition: 0.25s;
-        }
-
-        .burger-label span::before,
-        .burger-label span::after {
-            content: "";
-            position: absolute;
-            width: 22px;
-            height: 2px;
-            background: #fff;
-            border-radius: 2px;
-            transition: 0.25s;
-        }
-
-        .burger-label span::before { top: -6px; }
-        .burger-label span::after { top: 6px; }
-
-        /* Animation croix */
-        .burger input:checked + .burger-label span {
-            background: transparent;
-        }
-
-        .burger input:checked + .burger-label span::before {
-            transform: translateY(6px) rotate(45deg);
-        }
-
-        .burger input:checked + .burger-label span::after {
-            transform: translateY(-6px) rotate(-45deg);
-        }
-
-        /* ===========================
-           MOBILE NAV
-        =========================== */
-        .mobile-nav {
-            display: none;
-            background: linear-gradient(135deg, var(--accent1), var(--accent2));
-            padding: 1rem;
-            margin-top: 0.5rem;
-            border-radius: 10px;
-        }
-
-        .mobile-nav a {
             display: block;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            color: #fff;
-            text-decoration: none;
-            font-family: var(--ff-serif);
-        }
-
-        /* ouvrir menu */
-        .burger input:checked ~ .mobile-nav {
-            display: block !important;
-        }
-
-        /* éviter que la nav casse la mise en page */
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Header compact sur téléphone */
-        .header {
-            padding: 0.8rem;
-        }
-
-        .header h1 {
-            font-size: 1.2rem !important;
-        }
-    }
-
-    /* Extra small phones */
-    @media (max-width: 420px) {
-        .header h1 {
-            font-size: 1rem !important;
         }
     }
 
