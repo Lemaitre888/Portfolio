@@ -524,9 +524,14 @@ em {
 
 /* Responsive */
 @media (max-width: 600px) {
-    .header h1 {
-        font-size: 2rem;
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 1.5rem 1rem; /* un peu moins de padding mais propre */
     }
+}
+
 
     .nav ul {
         flex-direction: column;
@@ -561,7 +566,7 @@ em {
     }
 
     .header {
-        position: sticky;
+        position: relative;
         top: 0;
         z-index: 100;
         background: linear-gradient(135deg, #4B0082, #FFD700);
