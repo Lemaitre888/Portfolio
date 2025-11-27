@@ -8,7 +8,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="Portfolio.css">
 </head>
+
 <body>
+
+<!-- MENU BURGER -->
+<div class="burger">
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="burger-label">
+    <span></span>
+  </label>
+</div>
+
 <header class="header">
   <h1>Mon Portfolio 2025</h1>
   <nav class="nav" aria-label="Menu principal">
@@ -19,12 +29,14 @@
     </ul>
   </nav>
 </header>
+
 <main class="main">
   <section class="intro">
     <h2>Salut, moi c’est Moussa !</h2>
     <p>Je suis en première année en BUT info, et ici je vais vous montrer tous les projets que j’ai faits en BUT info.</p>
     <a href="projets.html" class="cta-button">Découvre mes projets</a>
   </section>
+
   <section class="stats">
     <h3>En bref</h3>
     <div class="stats-grid">
@@ -42,33 +54,58 @@
       </div>
     </div>
   </section>
+
   <section class="project-teaser">
     <h3>Quelques projets</h3>
     <div class="teaser-grid">
+
       <article class="teaser-card">
         <div class="project-placeholder adjust-icon-spacing">
           <i class="fas fa-code fa-3x"></i>
-          SAE 1 : Gestion des Absences</div>
-        <div class="project-details"></div>
+          SAE 1 : Gestion des Absences
+        </div>
         <h3>Projet 1 : Gestion des Absences</h3>
         <p>Un programme en C pour gérer les absences des étudiants, avec ajout et suivi des données.</p>
         <a href="projets.html#s1-sae1" class="teaser-link">Voir plus</a>
-       </article>
+      </article>
+
       <article class="teaser-card">
         <div class="project-placeholder adjust-icon-spacing">
           <i class="fas fa-gamepad fa-3x"></i>
-          SAE 2 :Comparaison d'approche d'algorithmiques
+          SAE 2 : Comparaison d'approche d'algorithmiques
         </div>
-        <h4>Projet 2 : Comparaison d'approche algorithme </h4>
-        <p>Un jeu de lettres codé en C où les joueurs forment des mots pour vider leur chevalet. Défis : gestion du dictionnaire et compatibilité multi-plateformes.</p>
+        <h4>Projet 2 : Comparaison d'approche algorithme</h4>
+        <p>Un jeu de lettres codé en C où les joueurs forment des mots pour vider leur chevalet.</p>
         <a href="projets.html#s1-sae2" class="teaser-link">Voir plus</a>
       </article>
+
     </div>
   </section>
 </main>
+
 <footer class="footer">
   <p>Suis-moi : <a href="https://github.com/tonpseudo">GitHub</a> | <a href="https://linkedin.com/in/tonprofil">LinkedIn</a></p>
   <p>Me contacter : <a href="mailto:ton.email@example.com">ton.email@example.com</a></p>
 </footer>
+
+
+<!-- SCRIPT POUR HEADER QUI DISPARAÎT EN SCROLL -->
+<script>
+  let lastScroll = 0;
+  const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', () => {
+    const current = window.pageYOffset;
+
+    if (current > lastScroll) {
+      header.classList.add('hide');  // on descend → cacher
+    } else {
+      header.classList.remove('hide'); // on remonte → montrer
+    }
+
+    lastScroll = current;
+  });
+</script>
+
 </body>
 </html>
