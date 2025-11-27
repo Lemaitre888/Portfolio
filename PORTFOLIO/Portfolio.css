@@ -73,7 +73,7 @@ h1, h2, h3, h4 {
     padding: 3rem 1rem;
 }
 
-/* Intro (Portfolio.html) */
+/* Intro (index.html) */
 .intro {
     text-align: center;
     padding: 3rem 1rem;
@@ -118,7 +118,7 @@ h1, h2, h3, h4 {
     transform: scale(1.05);
 }
 
-/* Stats (Portfolio.html) */
+/* Stats (index.html) */
 .stats {
     text-align: center;
     padding: 3rem 1rem;
@@ -159,7 +159,7 @@ h1, h2, h3, h4 {
     font-size: 1.1rem;
 }
 
-/* Teasers (Portfolio.html) et Projets (projets.html) */
+/* Teasers (index.html) et Projets (projets.html) */
 .project-teaser, .projects {
     padding: 3rem 1rem;
     text-align: center;
@@ -504,7 +504,7 @@ h1, h2, h3, h4 {
     margin-right: 5px;
 }
 
-/* Animation au scroll (Portfolio.html) */
+/* Animation au scroll (index.html) */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
