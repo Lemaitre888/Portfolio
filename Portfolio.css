@@ -582,18 +582,4 @@ em {
     .passion h5 {
         font-size: 1.2em;
     }
-
-    .header {
-        position: sticky;
-        top: 0;
-        transition: transform 0.35s ease;
-        z-index: 999;
-    }
-
-    /* caché quand on scroll */
-    .header.hide {
-        transform: translateY(-100%);
-    }
-
-
 }

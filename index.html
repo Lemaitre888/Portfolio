@@ -66,26 +66,6 @@
     </div>
   </section>
 </main>
-
-<script>
-  let lastScroll = 0;
-  const header = document.querySelector('.header');
-
-  window.addEventListener('scroll', () => {
-    const current = window.pageYOffset;
-
-    if (current > lastScroll) {
-      // On descend → cacher le header
-      header.classList.add('hide');
-    } else {
-      // On remonte → montrer le header
-      header.classList.remove('hide');
-    }
-
-    lastScroll = current;
-  });
-</script>
-
 <footer class="footer">
   <p>Suis-moi : <a href="https://github.com/tonpseudo">GitHub</a> | <a href="https://linkedin.com/in/tonprofil">LinkedIn</a></p>
   <p>Me contacter : <a href="mailto:ton.email@example.com">ton.email@example.com</a></p>
