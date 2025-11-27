@@ -89,23 +89,7 @@
 </footer>
 
 
-<!-- SCRIPT POUR HEADER QUI DISPARAÎT EN SCROLL -->
-<script>
-  let lastScroll = 0;
-  const header = document.querySelector('.header');
 
-  window.addEventListener('scroll', () => {
-    const current = window.pageYOffset;
-
-    if (current > lastScroll) {
-      header.classList.add('hide');  // on descend → cacher
-    } else {
-      header.classList.remove('hide'); // on remonte → montrer
-    }
-
-    lastScroll = current;
-  });
-</script>
 
 </body>
 </html>
