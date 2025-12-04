@@ -21,7 +21,7 @@ h1, h2, h3, h4 {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #2600ff, #ff0000); /* Dégradé violet-or */
+    background: linear-gradient(135deg, blue, rouge); /* Dégradé  */
     padding: 2rem;
     text-align: center;
     border-bottom: 3px solid #FFD700;
@@ -197,6 +197,8 @@ nav ul li a {
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
 
 .teaser-card:hover, .project-card:hover {
     transform: translateY(-10px);
@@ -490,7 +492,7 @@ nav ul li a {
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, #4B0082, #FFD700);
+    background: linear-gradient(135deg, blue, red);
     color: #FFFFFF;
     text-align: center;
     padding: 1rem;
@@ -572,16 +574,16 @@ em {
     }
 
     .teaser-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
     }
 
-    .header {
+.header {
         position: relative;
         top: 0;
         z-index: 100;
-        background: linear-gradient(135deg, #4B0082, #FFD700);
+        background: linear-gradient(135deg, blue, red);
     }
 
     .about h2 {
